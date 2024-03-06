@@ -51,7 +51,6 @@ Cypress.Commands.add('createNote', (note, attachFile = false) => {
   }
 
   cy.contains('button', 'Create').click()
-  cy.wait(15000)
   cy.contains('.list-group-item', note).should('be.visible')
 })
 
@@ -72,8 +71,6 @@ Cypress.Commands.add('editNote', (note, newNoteValue, attachFile = false) => {
   }
 
   cy.contains('button', 'Save').click()
-
-  cy.wait(15000)
   cy.contains('.list-group-item', newNoteValue).should('be.visible')
   cy.contains('.list-group-item', note).should('not.exist')
 })
