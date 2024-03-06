@@ -4,9 +4,10 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   e2e: {
     baseUrl: 'https://notes-serverless-app.com',
+    env:{
+      viewportWidthBreakpoint: 768,
+    }
     //defaultCommandTimeout: 30000,
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
   },
+  projectId:'123db4a9-3af4-49db-a4b0-29c9e1be0416',
 })
